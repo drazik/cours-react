@@ -33,7 +33,7 @@ const App = () => {
 
 Il prend donc une seule prop: `name`, qui prend comme valeur le nom de l'artiste à afficher.
 
-Lorsque le composant est affiché et à chaque fois que la prop `name` change, un appel à la fonction `fetchArtist` du module `api` doit être lancé. Attention à prendre soin d'annuler les requêtes déjà en cours à l'aide un [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
+Lorsque le composant est affiché et à chaque fois que la prop `name` change, un appel à la fonction `fetchArtist` du module `api` doit être lancé. Pour cela, utilisez un effet grâce à la fonction [`useEffect`](https://beta.reactjs.org/learn/synchronizing-with-effects) exposée par React. Attention à prendre soin d'annuler les requêtes déjà en cours à l'aide un [`AbortController`](https://developer.mozilla.org/en-US/docs/Web/API/AbortController).
 
 Avec les données retournées par l'API, afficher les infos de l'artiste dans la page. Pour la structure du DOM, vous pouvez reprendre [celle de l'exercice original](https://github.com/drazik/cours-js/blob/master/exercices/music-charts/components/Artist-finished.js#L41-L78).
 
